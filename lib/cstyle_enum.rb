@@ -25,6 +25,7 @@ module CstyleEnum
 
 		receiver.__send__ :remove_const, :ENUM_DUMMY_VALUE
 	end
+	alias_method :cstyle_enum, :enum
 end
 
 class Module

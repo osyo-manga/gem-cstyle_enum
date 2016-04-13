@@ -12,7 +12,7 @@ class X
 		BLUE
 	}
 
-	enum(2) {
+	cstyle_enum(2) {
 		MADO = 2
 		MAMI
 		HOMU
