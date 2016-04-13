@@ -22,7 +22,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+class Color
+	enum {
+		RED
+		GREEN = 3
+		BLUE
+	}
+end
+
+Color::RED    # => 0
+Color::GREEN  # => 3
+Color::GLUE   # => 4
+```
 
 ## Development
 
