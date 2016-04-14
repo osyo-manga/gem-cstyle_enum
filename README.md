@@ -36,7 +36,7 @@ end
 
 Color::RED    # => 0
 Color::GREEN  # => 3
-Color::GLUE   # => 4
+Color::BLUE   # => 4
 ```
 
 ## Development
