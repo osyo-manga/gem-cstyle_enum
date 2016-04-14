@@ -6,7 +6,7 @@ class X
 		name
 	end
 
-	enum {
+	Colors = enum {
 		RED
 		GREEN = 3
 		BLUE
@@ -32,6 +32,11 @@ describe CstyleEnum do
 
   it "call X.const_missing" do
 	  expect(X::SAYA).to eq :SAYA
+  end
+
+  it "enum return value" do
+	  expect(X::Colors.values).to eq [0, 3, 4]
+	  expect(X::Colors.keys).to eq [:RED, :GREEN, :BLUE]
   end
 
 end

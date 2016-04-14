@@ -27,16 +27,17 @@ require "cstyle_enum"
 
 class Color
 	# enum or cstyle_enum
-	enum {
+	Colors = enum {
 		RED
 		GREEN = 3
 		BLUE
 	}
 end
 
-Color::RED    # => 0
-Color::GREEN  # => 3
-Color::BLUE   # => 4
+Color::RED      # => 0
+Color::GREEN    # => 3
+Color::BLUE     # => 4
+Color::Colors   # => {:RED=>0, :GREEN=>3, :BLUE=>4}
 ```
 
 ## Development
@@ -47,5 +48,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/cstyle_enum.
+Bug reports and pull requests are welcome on GitHub at https://github.com/osyo-manga/gem-cstyle_enum.
 

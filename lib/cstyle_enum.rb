@@ -3,6 +3,8 @@ require "cstyle_enum/version"
 module CstyleEnum
 	def enum step = 1, &block
 		receiver = block.binding.eval("self")
+		start_constants = receiver.constants
+
 		has_const_missing = receiver.methods(false).include? :const_missing
 		receiver.const_set :ENUM_DUMMY_VALUE, -step
 
@@ -24,6 +26,7 @@ module CstyleEnum
 		}
 
 		receiver.__send__ :remove_const, :ENUM_DUMMY_VALUE
+		Hash[(receiver.constants - start_constants).map{ |it| [it, receiver.const_get(it)] }]
 	end
 	alias_method :cstyle_enum, :enum
 end
