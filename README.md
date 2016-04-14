@@ -23,7 +23,10 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+require "cstyle_enum"
+
 class Color
+	# enum or cstyle_enum
 	enum {
 		RED
 		GREEN = 3
